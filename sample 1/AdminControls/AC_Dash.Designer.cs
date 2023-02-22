@@ -30,27 +30,60 @@ namespace sample_1.AdminControls
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LatesTab = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.LatesTab)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.BackColor = System.Drawing.Color.PaleGreen;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Location = new System.Drawing.Point(3, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
+            this.label1.Size = new System.Drawing.Size(387, 46);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Recent Transactions";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(1, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(915, 55);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "_________________________________";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LatesTab
+            // 
+            this.LatesTab.AllowUserToDeleteRows = false;
+            this.LatesTab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LatesTab.Location = new System.Drawing.Point(11, 140);
+            this.LatesTab.Name = "LatesTab";
+            this.LatesTab.ReadOnly = true;
+            this.LatesTab.RowHeadersWidth = 62;
+            this.LatesTab.RowTemplate.Height = 28;
+            this.LatesTab.Size = new System.Drawing.Size(888, 455);
+            this.LatesTab.TabIndex = 6;
             // 
             // AC_Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.Controls.Add(this.LatesTab);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Name = "AC_Dash";
             this.Size = new System.Drawing.Size(914, 612);
+            this.Load += new System.EventHandler(this.AC_Dash_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.LatesTab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -59,5 +92,7 @@ namespace sample_1.AdminControls
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView LatesTab;
     }
 }

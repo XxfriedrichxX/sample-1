@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sample_1.AdminControls
+namespace sample_1
 {
-    public partial class AC_Form : UserControl
+    public partial class Forms1 : Form
     {
-        public AC_Form()
+        public Forms1()
         {
             InitializeComponent();
-        }
-
-        private void Form2btn_Click(object sender, EventArgs e)
-        {
-            Forms2 labas = new Forms2();
-            labas.Show();
         }
     }
 }

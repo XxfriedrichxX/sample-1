@@ -33,5 +33,16 @@ namespace sample_1.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CSV670JQ\\SQLEXPRESS;Initial Catalog=inventory_db;Integrated Se" +
+            "curity=True")]
+        public string inventory_dbConnectionString {
+            get {
+                return ((string)(this["inventory_dbConnectionString"]));
+            }
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sample_1
 {
-    public partial class SearchChem : Form
+    public partial class PrintForms2 : Form
     {
-        public SearchChem()
+        public PrintForms2()
         {
             InitializeComponent();
         }

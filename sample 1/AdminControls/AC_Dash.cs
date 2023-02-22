@@ -17,6 +17,9 @@ namespace sample_1.AdminControls
             InitializeComponent();
         }
 
-      
+        private void AC_Dash_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

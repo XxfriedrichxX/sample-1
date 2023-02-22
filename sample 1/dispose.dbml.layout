@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dispose">
+  <DataContextMoniker Name="/disposeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="86f682e2-2ef9-44d0-8393-a968303dfcda" absoluteBounds="1.25, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/disposeDataContext/chemical_tab" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca8b2d22-94a0-4675-a39e-a5d1b1909bae" absoluteBounds="1.2650000000000001, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6973106f-ab41-4829-aa47-a9ce3da7758d" absoluteBounds="4.75, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/disposeDataContext/disposeChemical_tab" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0414805c-e0e8-4700-a69d-592ab9e0339d" absoluteBounds="4.765, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 2.39024983723958); (4.75 : 2.39024983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/disposeDataContext/chemical_tab/chemical_tab_disposeChemical_tab" />
+      <nodes>
+        <classShapeMoniker Id="86f682e2-2ef9-44d0-8393-a968303dfcda" />
+        <classShapeMoniker Id="6973106f-ab41-4829-aa47-a9ce3da7758d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

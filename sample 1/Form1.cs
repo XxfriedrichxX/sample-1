@@ -13,6 +13,7 @@ namespace sample_1
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +27,14 @@ namespace sample_1
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
+
+            string UserName;
+
             //Set the username and password
             if(username.Text == "admin" && password.Text=="123")
             {
                 // transition to another windows form
+                UserName = username.Text;
                 new dashboard().Show();
                 this.Hide();
             }
@@ -42,6 +47,22 @@ namespace sample_1
                 username.Focus();
             }
 
+
+           /* if (username.Text == "Student Assistant" && password.Text == "567")
+            {
+                // transition to another windows form
+                UserName = username.Text;
+                new dashboard().Show();
+                this.Hide();
+            }
+            else
+            {
+                //To show incorrect input
+                MessageBox.Show("The Username or Password is Incorrect");
+                username.Clear();
+                password.Clear();
+                username.Focus();
+            }*/
         }
 
         private void show_CheckedChanged(object sender, EventArgs e)

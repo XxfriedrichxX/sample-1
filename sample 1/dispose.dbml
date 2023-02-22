@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="inventory_db" Class="disposeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-CSV670JQ\SQLEXPRESS;Initial Catalog=inventory_db;Integrated Security=True" SettingsObjectName="sample_1.Properties.Settings" SettingsPropertyName="inventory_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.chemical_tab" Member="chemical_tabs">
+    <Type Name="chemical_tab">
+      <Column Name="Chemical_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Chemical_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="unit" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="chemical_Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="expiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateAndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="chemical_tab_disposeChemical_tab" Member="disposeChemical_tabs" ThisKey="Chemical_ID" OtherKey="Chemical_ID" Type="disposeChemical_tab" />
+    </Type>
+  </Table>
+  <Table Name="dbo.disposeChemical_tab" Member="disposeChemical_tabs">
+    <Type Name="disposeChemical_tab">
+      <Column Name="DisposeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Chemical_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dateAndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="chemical_tab_disposeChemical_tab" Member="chemical_tab" ThisKey="Chemical_ID" OtherKey="Chemical_ID" Type="chemical_tab" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

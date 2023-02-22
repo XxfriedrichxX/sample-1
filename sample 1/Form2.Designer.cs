@@ -61,7 +61,7 @@ namespace sample_1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1208, 81);
+            this.panel1.Size = new System.Drawing.Size(1372, 81);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox2
@@ -80,7 +80,7 @@ namespace sample_1
             this.logout.Dock = System.Windows.Forms.DockStyle.Right;
             this.logout.FlatAppearance.BorderSize = 0;
             this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout.Location = new System.Drawing.Point(1074, 0);
+            this.logout.Location = new System.Drawing.Point(1238, 0);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(134, 81);
             this.logout.TabIndex = 0;
@@ -91,9 +91,9 @@ namespace sample_1
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1187, 81);
+            this.vScrollBar1.Location = new System.Drawing.Point(1351, 81);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(21, 649);
+            this.vScrollBar1.Size = new System.Drawing.Size(21, 867);
             this.vScrollBar1.TabIndex = 2;
             // 
             // sidebar
@@ -110,7 +110,7 @@ namespace sample_1
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 81);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(280, 649);
+            this.sidebar.Size = new System.Drawing.Size(280, 867);
             this.sidebar.TabIndex = 3;
             // 
             // panel2
@@ -147,6 +147,7 @@ namespace sample_1
             // 
             // Homebtn
             // 
+            this.Homebtn.CheckedState.FillColor = System.Drawing.Color.PaleGreen;
             this.Homebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Homebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Homebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -282,19 +283,20 @@ namespace sample_1
             // 
             this.panelControl.Location = new System.Drawing.Point(282, 81);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(923, 649);
+            this.panelControl.Size = new System.Drawing.Size(1085, 864);
             this.panelControl.TabIndex = 4;
             // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 730);
+            this.ClientSize = new System.Drawing.Size(1372, 948);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel1);
             this.Name = "dashboard";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Dash Board";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
