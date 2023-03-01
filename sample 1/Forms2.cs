@@ -233,38 +233,6 @@ namespace sample_1
 
         }
 
-        private void btnSaveReport_Click(object sender, EventArgs e)
-        {
-            /*// Create a new ReportDocument
-            ReportDocument report = new ReportDocument();
-
-            // Load the report file
-            string reportPath = @"C:\path\to\MyReport.rpt";
-
-            if (File.Exists(reportPath))
-            {
-                report.Load(reportPath);
-            }
-            else
-            {
-                Console.WriteLine("Report file not found.");
-            }
-            report.Load("MyReport.rpt");
-
-            // Export the report to a file
-            string reportTitle = "MyReport";
-            string reportFileName = string.Format("{0}_{1}.pdf", DateTime.Now.ToString("yyyyMMddHHmmss"), reportTitle);
-            report.ExportToDisk(ExportFormatType.PortableDocFormat, reportFileName);
-
-            // Save the report data to the database
-            
-
-            SqlCommand cmd = new SqlCommand("INSERT INTO ReportTable (ReportFileName, ReportDateTime) VALUES (@ReportFileName, @ReportDateTime)", Conn);
-            cmd.Parameters.AddWithValue("@ReportFileName", reportFileName);
-            cmd.Parameters.AddWithValue("@ReportDateTime", DateTime.Now);
-            Conn.Open();
-            cmd.ExecuteNonQuery();
-            Conn.Close();*/
-        }
+       
     }
 }

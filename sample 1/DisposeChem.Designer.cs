@@ -300,13 +300,13 @@ namespace sample_1
             // DisChembtn
             // 
             this.DisChembtn.AutoRoundedCorners = true;
-            this.DisChembtn.BorderRadius = 27;
+            this.DisChembtn.BorderRadius = 20;
             this.DisChembtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DisChembtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DisChembtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DisChembtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DisChembtn.FillColor = System.Drawing.Color.SeaGreen;
-            this.DisChembtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisChembtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisChembtn.ForeColor = System.Drawing.Color.White;
             this.DisChembtn.Image = ((System.Drawing.Image)(resources.GetObject("DisChembtn.Image")));
             this.DisChembtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;

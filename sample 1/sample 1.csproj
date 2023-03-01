@@ -49,12 +49,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -136,6 +142,7 @@
     <Compile Include="AdminControls\AC_Supplier.Designer.cs">
       <DependentUpon>AC_Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminControls\PdfDocument.cs" />
     <Compile Include="dispose.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +254,27 @@
       <DependentUpon>dispose.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.CachedFilenameReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.CachedObjectReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.CachedReport.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.CachedReportConstants.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.EromReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ICachedReport.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.IReportSourceFactory.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.LocalReportSourceBase.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.NonHTTPCachedReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ParameterConverter+Separators.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ParameterConverter.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ProxyReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.RemoteReportSource.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceConverter.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceEditor.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceFactory.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceFactoryBase.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceTreeView.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.ReportSourceTreeViewNode.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.SimpleReportSourceEditor.datasource" />
+    <None Include="Properties\DataSources\CrystalDecisions.ReportSource.StringObjectConverterHelper.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

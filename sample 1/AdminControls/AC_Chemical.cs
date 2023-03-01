@@ -117,7 +117,14 @@ namespace sample_1.AdminControls
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-
+            Conn.Open();
+            SqlCommand Com = new SqlCommand("deleteChemical", Conn);
+            Com.CommandType = CommandType.StoredProcedure;
+            Com.Parameters.AddWithValue("@Chemical_Name", chemNametextbox.Text);
+            Com.ExecuteNonQuery();
+            Conn.Close();
+            LoadAllRecords();
+            MessageBox.Show("Deleted Succesfully");
         }
 
         

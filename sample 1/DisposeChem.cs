@@ -19,45 +19,39 @@ namespace sample_1
 
         }
         public SqlConnection Conn = new SqlConnection(@"Data Source=LAPTOP-CSV670JQ\SQLEXPRESS;Initial Catalog=inventory_db;Integrated Security=True");
-        disposeDataContext db = new disposeDataContext();
+        DataTable dt;
         private void DisChembtn_Click(object sender, EventArgs e)
         {
-            var st = new disposeChemical_tab
-            {
-                Chemical_ID = int.Parse(ChemIDtextbox.Text),
-                dateAndTime = DateTime.Parse(dateandtime.Text),
-            };
-            db.disposeChemical_tabs.InsertOnSubmit(st);
-            db.SubmitChanges();
-            MessageBox.Show("Dispose Succesfully");
+            Conn.Open();
+            SqlCommand Com = new SqlCommand("dispose", Conn);
+            Com.CommandType = CommandType.StoredProcedure;
+            Com.Parameters.AddWithValue("@Chemical_ID", int.Parse(ChemIDtextbox.Text));
+            Com.Parameters.AddWithValue("@Chemical_Name", chemNametextbox.Text);
+            Com.Parameters.AddWithValue("@amount", decimal.Parse(amounttextbox.Text));
+            Com.Parameters.AddWithValue("@unit", unittextbox.Text);
+            Com.Parameters.AddWithValue("@chemical_Type", chemicaltypetextbox.Text);
+            Com.Parameters.AddWithValue("@expiryDate", DateTime.Parse(expirydate.Text));
+            Com.Parameters.AddWithValue("@DateAndTime", DateTime.Parse(dateandtime.Text));
+            Com.ExecuteNonQuery();
+            Conn.Close();
             LoadDispose();
-        
-    }
+            MessageBox.Show("Dispose Recorded");
+
+        }
         void LoadDispose()
         {
-            var st = from s in db.chemical_tabs join o in db.disposeChemical_tabs on s.Chemical_ID equals o.Chemical_ID select new { s.Chemical_ID, s.Chemical_Name, s.amount, s.unit, s.chemical_Type, s.expiryDate, s.DateAndTime, o.dateAndTime };
-            chemicalTable.DataSource = st;
+            SqlCommand com = new SqlCommand("exec dbo.viewDispose", Conn);
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            chemicalTable.DataSource = dt;
         }
 
         private void ChemIDtextbox_TextChanged(object sender, EventArgs e)
         {
-            if (ChemIDtextbox.Text !="")
-            {
-                var chemExist = from s in db.chemical_tabs where s.Chemical_ID == int.Parse(ChemIDtextbox.Text) select s.Chemical_ID;
-                if (chemExist.Count()>0)
-                {
-                    var Chemname = (from s in db.chemical_tabs where s.Chemical_ID == int.Parse(ChemIDtextbox.Text) select s).First();
-                    chemNametextbox.Text = Chemname.Chemical_Name;
-                }
-                else
-                {
-                    chemNametextbox.Text = "Not found";
-                }
-            }
-            else
-            {
-                chemNametextbox.Text = "";
-            }
+            DataView chemView = new DataView(dt);
+            chemView.RowFilter = String.Format("Chemical_ID LIKE '%{0}%'", ChemIDtextbox.Text);
+            chemicalTable.DataSource = chemView;
         }
 
         private void DisposeChem_Load(object sender, EventArgs e)

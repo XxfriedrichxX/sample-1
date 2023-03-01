@@ -91,7 +91,6 @@ namespace sample_1
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnSaveReport = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.chemicalTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Apparatustab)).BeginInit();
             this.SuspendLayout();
@@ -994,30 +993,12 @@ namespace sample_1
             this.label20.TabIndex = 117;
             this.label20.Text = "Admin";
             // 
-            // btnSaveReport
-            // 
-            this.btnSaveReport.BorderRadius = 15;
-            this.btnSaveReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSaveReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSaveReport.FillColor = System.Drawing.Color.Green;
-            this.btnSaveReport.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.btnSaveReport.ForeColor = System.Drawing.Color.White;
-            this.btnSaveReport.Location = new System.Drawing.Point(211, 529);
-            this.btnSaveReport.Name = "btnSaveReport";
-            this.btnSaveReport.Size = new System.Drawing.Size(139, 52);
-            this.btnSaveReport.TabIndex = 118;
-            this.btnSaveReport.Text = "Save";
-            this.btnSaveReport.Click += new System.EventHandler(this.btnSaveReport_Click);
-            // 
             // Forms2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
-            this.Controls.Add(this.btnSaveReport);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -1149,6 +1130,5 @@ namespace sample_1
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private Guna.UI2.WinForms.Guna2Button btnSaveReport;
     }
 }
